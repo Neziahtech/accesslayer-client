@@ -6,6 +6,7 @@ import NotificationsPage from './pages/NotificationsPage';
 import LeaderboardPage from './pages/LeaderboardPage';
 import ProfilePage from './pages/ProfilePage';
 import FollowingPage from './pages/FollowingPage';
+import GovernancePage from './pages/GovernancePage';
 
 export const routes = [
 	{
@@ -47,6 +48,10 @@ export const routes = [
 	{
 		path: '/following',
 		element: <FollowingPage />,
+	},
+	{
+		path: '/governance',
+		element: <GovernancePage />,
 	},
 	{
 		path: '*',
