@@ -55,6 +55,7 @@ import { env } from '@/utils/env.utils';
 import MiniStatChip from '@/components/common/MiniStatChip';
 import Change24hBadge from '@/components/common/Change24hBadge';
 import KeySupplyBadge from '@/components/common/KeySupplyBadge';
+import NewKeyBadge from '@/components/common/NewKeyBadge';
 import CreatorListRowDivider from '@/components/common/CreatorListRowDivider';
 import BuyActionHelperText from '@/components/common/BuyActionHelperText';
 import NetworkFeeHint from '@/components/common/NetworkFeeHint';
@@ -286,6 +287,10 @@ const CreatorCard: React.FC<CreatorCardProps> = ({
 				role="img"
 				aria-labelledby={`creator-name-${creator.id}`}
 			>
+				<NewKeyBadge
+					createdAt={creator.createdAt}
+					className="creator-card-overlay-text absolute left-3 top-3 z-10"
+				/>
 				<CreatorInitialsAvatar
 					name={displayCreatorName}
 					creatorId={creator.id}
@@ -333,6 +338,7 @@ const CreatorCard: React.FC<CreatorCardProps> = ({
 					<Change24hBadge change={creator.change24h} />
 					<KeySupplyBadge supply={creator.creatorShareSupply} />
 					{isRecentlyActive && <RecentActivityBadge />}
+					<NewKeyBadge createdAt={creator.createdAt} />
 				</div>
 				<p className="marketplace-label-muted font-jakarta text-sm">
 					<CreatorHandleHoverCard

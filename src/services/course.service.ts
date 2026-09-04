@@ -21,6 +21,8 @@ export interface Course {
 	volume24h?: number;
 	change24h?: number;
 	joinedAt?: string;
+	/** ISO timestamp for when the creator key was created. */
+	createdAt?: string;
 	/** Whether this creator is pinned in the marketplace list. */
 	isPinned?: boolean;
 	creatorFeeBps?: number;
